@@ -1,93 +1,77 @@
-# Ensemble Methods for UHC Prediction
+# UHC Ensemble – Healthcare Data Analysis
 
-**Data Analyst Portfolio Project**  
-Prediksjon av Universal Health Coverage (UHC) Service Coverage Index ved hjelp av ensemble-metoder i Python.
+## Project Overview
+This project explores and analyzes a **United Healthcare dataset** using **Python** to extract insights, identify trends, and prepare data for further modeling.  
+The analysis includes **data cleaning**, **exploratory data analysis (EDA)**, and **visualization** to support data-driven decision-making in healthcare analytics.
 
 ---
 
-## 📁 Filstruktur
+## Tools & Technologies
+- **Python 3**
+- **Pandas** – data manipulation
+- **NumPy** – numerical computations
+- **Matplotlib & Seaborn** – data visualization
+- **Jupyter Notebook** – interactive development
 
-```text
-Jupiter_ensemble/
-├── data/                   
-│   └── UHC.csv             # Rådata fra WHO
-├── notebooks/              
-│   └── 01_EDA_UHC.ipynb    # EDA + introduksjon til ensemble-metoder
-├── src/                    
-│   └── data_utils.py       # Hjelpefunksjoner for lasting og pre-prosessering (valgfritt)
-├── reports/                
-│   └── figures/            # Eksporterte plots og figurer
-├── requirements.txt        # Python-pakker og versjoner
-└── README.md               # Denne filen
+---
+
+## Project Structure
+```
+uhc-ensemble/
+│
+├── README.md                <- Project documentation (this file)
+├── notebooks/
+│   └── 01_EDA_UHC.ipynb     <- Main EDA notebook
+├── data/
+│   └── UHC.csv              <- Dataset (if tracked)
+├── .gitignore               <- Ignored files/folders
+└── requirements.txt         <- Python dependencies
 ```
 
 ---
 
-## 🔍 Prosjektbeskrivelse
-
-I dette prosjektet:
-
-1. **EDA**  
-   - Sjekker datatyper, manglende verdier og fordeling per land/år  
-   - Filtrerer til siste års UHC-verdier  
-
-2. **Baseline-modell**  
-   - Linear Regression som referanse  
-
-3. **Bagging**  
-   - Random Forest Regressor  
-
-4. **Boosting**  
-   - XGBoost Regressor  
-
-5. **Evaluering**  
-   - Metrisering med Mean Squared Error (MSE) og R² Score  
-   - Predicted vs. Actual-plot  
-
-6. **Forklarbarhet (valgfritt)**  
-   - SHAP-analyse for å identifisere viktige drivere  
-
-Målet er å demonstrere praktisk bruk av ensemble-teknikker på et samfunnsrelevant datasett – uten å gå for dypt inn i avansert modell-engineering.
+## Key Steps in the Analysis
+1. **Data Loading** – Importing CSV dataset into Pandas DataFrame.
+2. **Data Cleaning** – Handling missing values, renaming columns, correcting data types.
+3. **Exploratory Data Analysis (EDA)** –  
+   - Summary statistics  
+   - Univariate & bivariate visualizations  
+   - Distribution analysis
+4. **Insights Generation** – Identifying trends & correlations.
 
 ---
 
-## ⚙️ Komme i gang
-
-1. **Opprett virtuelt miljø**  
+## How to Run Locally
+1. **Clone the repository**  
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate    # macOS/Linux
-   venv\Scripts\activate     # Windows
+   git clone https://github.com/LordBalouch/uhc-ensemble.git
+   cd uhc-ensemble
    ```
-
-2. **Installer avhengigheter**  
+2. **(Optional) Create and activate a virtual environment**  
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Mac/Linux
+   .venv\Scripts\activate     # Windows
+   ```
+3. **Install dependencies**  
    ```bash
    pip install -r requirements.txt
    ```
-
-3. **Kjør EDA-notebook**  
-   Åpne `notebooks/01_EDA_UHC.ipynb` i VSCode eller Jupyter Lab og kjør cellene i rekkefølge.
-
----
-
-## 📈 Hovedfunn
-
-- Oversikt over data og manglende verdier  
-- Visualisering av UHC-indeks-fordeling per land  
-- Modellresultater:
-  - Linear Regression: MSE = …, R² = …  
-  - Random Forest: MSE = …, R² = …  
-  - XGBoost: MSE = …, R² = …  
-
-*Se notebook-seksjonen “Konklusjon og Neste Steg” for detaljert oppsummering.*
+4. **Open the notebook**  
+   ```bash
+   jupyter notebook notebooks/01_EDA_UHC.ipynb
+   ```
 
 ---
 
-## 🤝 Bidra eller bruk
-
-Dette er et portfolio-prosjekt for en data analyst.  
-Koden kan gjenbrukes som mal for egne analyser og ensemble-eksperimenter.
+## Future Work
+- Apply feature engineering and preprocessing for ML models.
+- Build predictive models for healthcare cost estimation.
+- Add interactive dashboards (Power BI / Tableau).
 
 ---
 
-© 2025 • MIT License  
+## Contact
+**Babak Balouch**  
+[LinkedIn](https://www.linkedin.com/in/your-link)  
+your.email@example.com  
